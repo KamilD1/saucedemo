@@ -4,6 +4,7 @@ package org.example;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.PageFactory;
 
 public class Main {
     public static void main(String[] args){
@@ -14,6 +15,14 @@ public class Main {
 
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
+
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
+
+        loginPage.loginPage("standard_user", "secret_sauce");
+        productPage.addProductToCart();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
+
 
 
     }
