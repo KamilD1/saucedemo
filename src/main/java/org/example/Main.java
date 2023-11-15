@@ -18,10 +18,12 @@ public class Main {
 
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
+        LockedOutUser lockedOutUser = PageFactory.initElements(driver, LockedOutUser.class);
 
         loginPage.loginPage("standard_user", "secret_sauce");
         productPage.addProductToCart();
         productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        lockedOutUser.LockedUser("locked_out_user", "secret_sauce");
 
 
 

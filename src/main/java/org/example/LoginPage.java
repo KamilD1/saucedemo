@@ -10,10 +10,11 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-    @FindBy(id ="user-name")
+
+    @FindBy(id = "user-name")
     WebElement userName;
 
-    @FindBy(id="password")
+    @FindBy(id = "password")
     WebElement passwordBox;
 
     @FindBy(id = "login-button")
@@ -24,6 +25,5 @@ public class LoginPage {
         userName.sendKeys(login);
         passwordBox.sendKeys(password);
         loginButton.click();
-
     }
 }
