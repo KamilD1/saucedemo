@@ -18,6 +18,8 @@ public class ProductTable {
 
     @FindBy(className = "shopping_cart_link")
     WebElement cartLink;
+    @FindBy(id="checkout" )
+    WebElement chceckout;
 
 
     public void SearchProduct() {
@@ -26,12 +28,11 @@ public class ProductTable {
             List<WebElement> buttonList = driver.findElements(By.xpath("//div//button"));
             WebElement buttonAdd = buttonList.get(3);
             buttonAdd.click();
-
             driver.findElement(By.id("back-to-products")).click();
         }
 
         cartLink.click();
-        driver.findElement(By.id("checkout")).click();
+        chceckout.click();
 
 
 
