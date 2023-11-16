@@ -63,9 +63,9 @@ public class ProductPage {
         String lastText = completeHeader.getText();
         System.out.println(lastText);
         backHome.click();
-        menuButton.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-        logoutButton.click();
+        //menuButton.click();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        //logoutButton.click();
     }
 }
 
