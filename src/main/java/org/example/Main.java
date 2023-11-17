@@ -21,16 +21,19 @@ public class Main {
         ProductTable productTable = PageFactory.initElements(driver, ProductTable.class);
         AllElements allElements = PageFactory.initElements(driver, AllElements.class);
         BuyProduct buyProduct = PageFactory.initElements(driver, BuyProduct.class);
+        BuyWithDict buyWithDict= PageFactory.initElements(driver,BuyWithDict.class);
 
         loginPage.loginPage("standard_user", "secret_sauce");
         //productPage.addProductToCart();
         //productPage.chceckOutInformation("Jan","Kowalski","00-999");
         //productTable.SearchProduct();
         //productPage.chceckOutInformation("Jan","Kowalski","00-999");
-        allElements.giveAllProduct();
+        //allElements.giveAllProduct();
         //productPage.chceckOutInformation("Jan","Kowalski","00-999");
         //buyProduct.buyNewProduct();
         //productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        buyWithDict.giveMe();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
 
 
     }

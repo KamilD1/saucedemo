@@ -34,7 +34,7 @@ public class AllElements {
 
         }
         cartLink.click();
-        driver.findElement(By.id("checkout")).click();
+        driver.findElement(By.id("continue")).click();
 
     }
 
