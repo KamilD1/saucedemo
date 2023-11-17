@@ -17,10 +17,11 @@ public class AllElements {
 
     List<String> allProductsName = new ArrayList<>();
 
-    @FindBy(className = "inventory_item_name")
+    @FindBy(xpath = "//div[@class='inventory_item_name ']")
     List<WebElement> inventoryItem;
     @FindBy(className = "shopping_cart_link")
     WebElement cartLink;
+
 
     public void giveAllProduct() {
 
