@@ -19,14 +19,15 @@ public class Main {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
         ProductTable productTable = PageFactory.initElements(driver, ProductTable.class);
+        AllElements allElements = PageFactory.initElements(driver, AllElements.class);
 
         loginPage.loginPage("standard_user", "secret_sauce");
         productPage.addProductToCart();
         productPage.chceckOutInformation("Jan","Kowalski","00-999");
         productTable.SearchProduct();
         productPage.chceckOutInformation("Jan","Kowalski","00-999");
-
-
+        allElements.giveAllProduct();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
 
     }
 }
