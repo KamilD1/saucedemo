@@ -8,33 +8,31 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllElements {
+public class BuyProduct {
     WebDriver driver;
-
-    public AllElements(WebDriver driver) {
-        this.driver = driver;
+    public BuyProduct(WebDriver driver){
+        this.driver=driver;
     }
-
 
     @FindBy(className = "shopping_cart_link")
     WebElement cartLink;
 
-
-    public void giveAllProduct() {
-
+    public void buyNewProduct(){
         List<String> listOfProduct = new ArrayList<>();
         listOfProduct.add("Sauce Labs Onesie");
         listOfProduct.add("Sauce Labs Fleece Jacket");
         listOfProduct.add("Sauce Labs Bolt T-Shirt");
 
-        for (String element : listOfProduct) {
-            String button = "add-to-cart-" + element.replace(" ", "-");
-            driver.findElement(By.id(button.toLowerCase())).click();
-
-
+        for(String product: listOfProduct){
+            int number = listOfProduct.indexOf(product);
+            listOfProduct.set(number, "add-to-cart-" + product.replace(" ", "-").toLowerCase());
+        }
+        for (String element: listOfProduct){
+            driver.findElement(By.id(element)).click();
         }
         cartLink.click();
         driver.findElement(By.id("checkout")).click();
+
 
     }
 

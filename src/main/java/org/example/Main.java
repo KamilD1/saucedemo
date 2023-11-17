@@ -20,14 +20,18 @@ public class Main {
         ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
         ProductTable productTable = PageFactory.initElements(driver, ProductTable.class);
         AllElements allElements = PageFactory.initElements(driver, AllElements.class);
+        BuyProduct buyProduct = PageFactory.initElements(driver, BuyProduct.class);
 
         loginPage.loginPage("standard_user", "secret_sauce");
-        productPage.addProductToCart();
-        productPage.chceckOutInformation("Jan","Kowalski","00-999");
-        productTable.SearchProduct();
-        productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        //productPage.addProductToCart();
+        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        //productTable.SearchProduct();
+        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
         allElements.giveAllProduct();
-        productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        //buyProduct.buyNewProduct();
+        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
+
 
     }
 }
