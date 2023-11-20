@@ -14,8 +14,6 @@ public class BuyProduct {
         this.driver=driver;
     }
 
-    @FindBy(className = "shopping_cart_link")
-    WebElement cartLink;
 
     public void buyNewProduct(){
         List<String> listOfProduct = new ArrayList<>();
@@ -30,10 +28,5 @@ public class BuyProduct {
         for (String element: listOfProduct){
             driver.findElement(By.id(element)).click();
         }
-        cartLink.click();
-        driver.findElement(By.id("checkout")).click();
-
-
     }
-
 }

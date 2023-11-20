@@ -45,7 +45,8 @@ public class ProductPage {
     WebElement menuButton;
     @FindBy(id = "logout_sidebar_link")
     WebElement logoutButton;
-
+    @FindBy(className="shopping_cart_link")
+    WebElement cartLink;
 
     public void addProductToCart() {
         addToCart1.click();
@@ -55,6 +56,8 @@ public class ProductPage {
     }
 
     public void chceckOutInformation(String fName, String lName, String zipCode) {
+        cartLink.click();
+        driver.findElement(By.id("checkout")).click();
         firstName.sendKeys(fName);
         lastName.sendKeys(lName);
         postalCode.sendKeys(zipCode);

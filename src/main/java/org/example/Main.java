@@ -22,19 +22,21 @@ public class Main {
         AllElements allElements = PageFactory.initElements(driver, AllElements.class);
         BuyProduct buyProduct = PageFactory.initElements(driver, BuyProduct.class);
         BuyWithDict buyWithDict= PageFactory.initElements(driver,BuyWithDict.class);
+        AddRandomProduct addRandomProduct = PageFactory.initElements(driver, AddRandomProduct.class);
 
         loginPage.loginPage("standard_user", "secret_sauce");
-        //productPage.addProductToCart();
-        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
-        //productTable.SearchProduct();
-        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
-        //allElements.giveAllProduct();
-        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
-        //buyProduct.buyNewProduct();
-        //productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        productPage.addProductToCart();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        productTable.SearchProduct();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        allElements.giveAllProduct();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
+        buyProduct.buyNewProduct();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
         buyWithDict.giveMe();
         productPage.chceckOutInformation("Jan","Kowalski","00-999");
-
+        addRandomProduct.addRandomProduct();
+        productPage.chceckOutInformation("Jan","Kowalski","00-999");
 
     }
 }

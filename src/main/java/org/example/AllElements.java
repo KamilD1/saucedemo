@@ -16,10 +16,6 @@ public class AllElements {
     }
 
 
-    @FindBy(className = "shopping_cart_link")
-    WebElement cartLink;
-
-
     public void giveAllProduct() {
 
         List<String> listOfProduct = new ArrayList<>();
@@ -33,9 +29,5 @@ public class AllElements {
 
 
         }
-        cartLink.click();
-        driver.findElement(By.id("continue")).click();
-
     }
-
 }
