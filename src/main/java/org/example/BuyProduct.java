@@ -22,6 +22,7 @@ public class BuyProduct {
         listOfProduct.add("Sauce Labs Bolt T-Shirt");
 
         for(String product: listOfProduct){
+
             int number = listOfProduct.indexOf(product);
             listOfProduct.set(number, "add-to-cart-" + product.replace(" ", "-").toLowerCase());
         }
